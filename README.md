@@ -103,3 +103,82 @@ Together, these automations demonstrate the ability to:
 * Handle historical (backdated) data correctly
 * Automate repetitive operational tasks
 * Support SLA tracking and performance monitoring at scale
+
+## Dashboard (Airtable Interface)
+To support different stakeholders, three dashboards were designed using Airtable Interfaces, each focused on a specific business function: executive oversight, operations monitoring, and customer analytics.
+
+* Order / Executive Dashboard
+Purpose:
+Provide leadership with a high-level view of performance across orders, revenue, and service delivery.
+
+* Key Components:
+ - Total Number of Orders – KPI card showing overall order volume.
+ - Orders by Fulfillment Status – Pie chart highlighting the distribution of Pending, Packed, Shipped, and Delivered orders.
+ - Total Revenue by Month – Bar chart showing revenue trends across months (Jan–Mar 2019).
+ - SLA Performance – Bar chart comparing orders where SLA was met versus not applicable.
+
+* Business Value:
+ - Enables executives to quickly assess operational scale.
+ - Identifies revenue trends over time.
+ - Provides a snapshot of SLA compliance without operational detail overload.
+
+* Operations Dashboard
+Purpose:
+Help operations and fulfillment teams monitor delivery performance and identify bottlenecks.
+
+* Key Components:
+ - SLA Breach by Fulfillment Status – Bar chart showing how SLA breaches vary across fulfillment stages.
+ - Delayed Deliveries – Bar chart comparing delivery delays against SLA targets (5, 10, 20, 30 days).
+ - Order Status vs Payment Method (Pivot Table) – Breakdown of payment methods (E-wallet, Cash, Credit Card) for paid orders.
+
+* Business Value:
+ - Highlights where SLA breaches are concentrated.
+ - Helps operations teams focus on stages causing the most delays.
+ - Supports payment-method analysis for operational planning.
+
+* Customer Dashboard
+Purpose:
+Provide insights into customer value and purchasing behavior.
+
+* Key Components:
+ - High-Value Customers – Pie chart showing the distribution of customers by segment (High, Standard, Low value).
+ - Repeat Buyers – Bar chart identifying customers with multiple purchases.
+
+* Business Value:
+ - Reveals that a small percentage of customers contribute the majority of revenue.
+ - Supports targeted retention and loyalty strategies.
+ - Enables segmentation-based decision making.
+
+## Key Insights
+
+* Customer revenue is highly concentrated
+A small percentage of customers (high-value segment) contribute the majority of total revenue, indicating strong revenue concentration and the importance of retention strategies.
+
+* Most orders meet SLA, but breaches cluster at specific stages
+While overall SLA performance is positive, breaches are concentrated around specific fulfillment stages, suggesting operational bottlenecks rather than systemic failure.
+
+* Longer delivery timelines significantly increase SLA risk
+Orders with extended delivery durations show a higher likelihood of missing SLA targets, highlighting the impact of logistics delays on service performance.
+
+* Repeat buyers drive stability
+Customers with multiple orders provide consistent revenue and are more likely to fall into higher-value segments, reinforcing the importance of loyalty and repeat purchase programs.
+
+* Revenue trends vary by month
+Monthly revenue shows fluctuations, suggesting potential seasonality or operational constraints impacting order volume and fulfillment capacity.
+
+## Recommendations
+
+* Prioritize high-value customers in fulfillment workflows
+Fast-track fulfillment for high-value and repeat customers to improve retention and maximize lifetime value.
+
+* Investigate fulfillment stages with the highest SLA breaches
+Focus process improvement efforts on stages where SLA breaches are most frequent, such as packing or shipping delays.
+
+* Set realistic SLA targets based on historical performance
+Use observed delivery timelines to recalibrate SLA targets, balancing customer expectations with operational capacity.
+
+* Introduce proactive SLA alerts
+Extend automation to flag orders before SLA deadlines are missed, enabling corrective action rather than reactive responses.
+
+* Leverage dashboards for continuous monitoring
+Encourage operational teams to use dashboards daily to monitor delays, while executives use high-level KPIs to guide strategic decisions.
