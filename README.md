@@ -17,17 +17,21 @@ The original flat dataset was restructured into a relational data model to suppo
 - Order Items (bridge table)
 
 Relationships
-- The Orders table is linked to the Customers table to enable customer-level analytics.
+- The Orders table is linked to the Customers table to enable customer-level analytics. (Customers to orders table: Many to one relationship)
 - The Orders table is linked to the Products table through an Order Items table, creating a proper many-to-many relationship.
 - Supporting fields and rollups were created to ensure accurate aggregation across tables.
 
 ## Key Fields & Metrics
 ** Orders Table
 - Days to Deliver – Calculates how long it took to deliver an order.
+<img width="2560" height="1434" alt="Order table2" src="https://github.com/user-attachments/assets/3fe5f3bc-6f88-4a1c-b78d-eceb3fc0c206" />
 - Fulfillment Status – Tracks order progress (Pending, Packed, Shipped, Delivered, Failed).
+<img width="2560" height="1426" alt="Order table5" src="https://github.com/user-attachments/assets/57457f6c-5f97-4dfd-90e6-0ee890a8e657" />
 - SLA Target (Days) – The promised delivery timeframe.
+<img width="2551" height="1450" alt="Order table3" src="https://github.com/user-attachments/assets/fc07a685-8d57-48a9-ab0a-78ffdf0ecaae" />
 - SLA Met – Indicates whether the supermarket met the SLA.
 - SLA Breach – Flags orders that missed the SLA.
+
 
 ** Customers Table
 - Order Count – Total number of orders per customer.
