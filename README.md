@@ -1,4 +1,4 @@
-<img width="2560" height="1438" alt="auto SLA" src="https://github.com/user-attachments/assets/5b7c2d13-3a66-435f-b9ed-440af1a7d557" /># End-to-End Supermarket Operations & SLA Analytics (Airtable)
+# End-to-End Supermarket Operations & SLA Analytics (Airtable)
 
 ## Project Overview
 This project uses a supermarket transaction dataset to design an end-to-end order fulfillment and SLA monitoring system in Airtable.
