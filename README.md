@@ -40,3 +40,66 @@ Relationships
 - Line Cost
 - Line Margin
 These fields enable accurate revenue and margin calculations while linking products to individual orders.
+
+## Problem Statements
+This project was designed to answer the following business questions:
+* Who are the supermarket’s high-value and repeat customers?
+* Is the supermarket meeting its delivery SLA commitments?
+* Where do delivery delays and SLA breaches occur?
+* How can the order fulfillment workflow be automated?
+* What is the supermarket’s monthly revenue performance?
+
+## Automations Implemented
+(Order Fulfillment & SLA Monitoring)
+To simulate a real-world supermarket operations workflow, multiple event-driven automations were implemented in Airtable. These automations manage order progression, delivery tracking, and SLA breach detection using conditional triggers and record updates.
+
+🔁 Automation 1: Payment → Fulfillment Order
+* Trigger:
+ - When a record matches conditions
+* Order Status = Paid
+ - Actions:
+* Update Fulfillment Status to Pending
+  - Record payment confirmation by updating the relevant payment field/date
+
+* Purpose:
+This automation ensures that once an order is paid, it immediately enters the fulfillment pipeline without manual intervention.
+
+🚚 Automation 2: Shipment Update
+* Trigger:
+ - When a record matches conditions
+* Fulfillment Status = Shipped
+- Actions:
+* Update the order record to reflect shipment status
+ - Capture shipment-related information (e.g., shipment date)
+
+* Purpose:
+This step simulates the logistics process by automatically recording when an order leaves the warehouse and enters transit.
+
+📦 Automation 3: Delivery Completion
+* Trigger:
+ - When a record matches conditions
+* Fulfillment Status = Delivered
+ - Actions:
+* Update the order record to confirm delivery
+ - Mark the order as completed
+
+* Purpose:
+This automation closes the order lifecycle, ensuring delivery events are consistently recorded and downstream metrics (such as delivery duration and SLA performance) are updated.
+
+⚠️ Automation 4: SLA Breach Alert
+* Trigger:
+ - When a record matches conditions
+* SLA Met ≠ Yes (i.e., SLA not met)
+ - Actions:
+* Automatically check the SLA Breach flag on the order record
+
+Purpose:
+This automation identifies and flags orders that exceed the agreed SLA delivery timeframe, enabling quick visibility into operational failures and supporting SLA performance analysis.
+
+### Why These Automations Matter
+Together, these automations demonstrate the ability to:
+* Design event-based workflows
+* Separate operational state from analytical logic
+* Handle historical (backdated) data correctly
+* Automate repetitive operational tasks
+* Support SLA tracking and performance monitoring at scale
