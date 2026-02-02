@@ -10,7 +10,7 @@ The data includes order details, product categories, payment information, custom
 
 ## Data Modeling & System Design
 The original flat dataset was restructured into a relational data model to support analytics, automation, and scalability.
-* Core Tables
+Core Tables
  - Customers
  - Orders
  - Products
